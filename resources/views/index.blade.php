@@ -1,0 +1,10 @@
+@extends('layout')
+@section('noidungchinh')
+    @include('./Component/tin-moi-theo-the-loai')
+@endsection
+@section('tinmoislider')
+    @include('./Component/tin-moi-slider')
+@endsection
+@section('tin-theo-loai')
+    @include('./Component/tin-theo-loai')
+@endsection
