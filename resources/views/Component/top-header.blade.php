@@ -6,12 +6,8 @@
         <ul class="top-menu">
         <li><a href="#">
         <?php
-
-
             $dt = new DateTime();
             echo $dt->format('Y-m-d H:i:s');
-
-
         ?>
         </a></li>
     </ul>

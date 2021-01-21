@@ -19,6 +19,7 @@
                 @foreach($listLoaiTin as $loaiTin)
                     <li><a href="./">{{$loaiTin->Ten}}</a></li>
                 @endforeach
+
             </ul>
         @else
 
@@ -26,6 +27,6 @@
 
         </li>
         @endforeach
-
+        <li><a href="/lienhe">Liên Hệ</a></li>
     </ul> <!-- end menu -->
     </nav>
