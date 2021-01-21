@@ -15,7 +15,7 @@
     ->join('loaitin', 'tin.idLT', '=', 'loaitin.idLT')
     ->where('tin.lang','vi')
     ->offset(0)->limit(4)->get();
-    $listTheLoai = TheLoai::limit(4)->get()
+    $listTheLoai = TheLoai::where('theloai.AnHien','=','1')->limit(4)->get()
     ?>
     @include('./Component/tin-moi-theo-the-loai')
 @endsection

@@ -20,3 +20,6 @@ Route::get('/', [TinController::class, 'index']);
 //     print_r($kq);
 // });
 Route::get('/ttl', [TinController::class, 'tintrongloai']);
+Route::get('ctt/{id}', [TinController::class, 'chitiettin']);
+Route::get('ttl/{id}', [TinController::class, 'tintrongloai']);
+Route::get('lienhe/', [TinController::class, 'lienhe']);

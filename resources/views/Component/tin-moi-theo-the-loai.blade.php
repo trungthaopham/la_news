@@ -30,7 +30,7 @@
             <div class="col-md-6">
                 <article class="entry card">
                 <div class="entry__img-holder card__img-holder">
-                    <a href="single-post.html">
+                    <a href="./ctt/{{$item->idTin}}">
                     <div class="thumb-container thumb-70">
                         <img data-src='{{$item->urlHinh}}' src='{{$item->urlHinh}}' class="entry__img lazyload" alt="" />
                     </div>
@@ -42,7 +42,7 @@
                     <div class="entry__header">
 
                     <h2 class="entry__title">
-                        <a href="single-post.html">{{$item->TieuDe}}</a>
+                        <a href="./ctt/{{$item->idTin}}">{{$item->TieuDe}}</a>
                     </h2>
                     <ul class="entry__meta">
                         <li class="entry__meta-author">
@@ -83,7 +83,7 @@
                 <div class="entry__img-holder card__img-holder">
                     <a href="single-post.html">
                     <div class="thumb-container thumb-70">
-                        <img data-src='{{$item->urlHinh}}' src='{{$item->urlHinh}}' class="entry__img lazyload" alt="" />
+                        <img data-src='{{$item->urlHinh}}' src='{{$item->urlHinh}}' onerror="this.src='img/unnamed.jpg'" class="entry__img lazyload" alt="" />
                     </div>
                     </a>
                     <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">{{$tenLoaiTin[0]['Ten']}}</a>
@@ -92,7 +92,7 @@
                 <div class="entry__body card__body">
                     <div class="entry__header">
                     <h2 class="entry__title">
-                        <a href="single-post.html">{{$item->TieuDe}}</a>
+                        <a href="./ctt/{{$item->idTin}}">{{$item->TieuDe}}</a>
                     </h2>
                     <ul class="entry__meta">
                         <li class="entry__meta-author">

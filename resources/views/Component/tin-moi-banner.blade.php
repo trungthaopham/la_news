@@ -7,7 +7,7 @@
         <div class="newsticker">
         <ul class="newsticker__list">
             @foreach ($listTinMoiBanner as $item)
-            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url"><?=Str::limit($item->TomTat, 120, '...') ?></a></li>
+            <li class="newsticker__item"><a href="./ctt/{{$item->idTin}}" class="newsticker__item-url"><?=Str::limit($item->TomTat, 120, '...') ?></a></li>
             @endforeach
 
         </ul>
@@ -28,14 +28,14 @@
             <div class="featured-posts-grid__item featured-posts-grid__item--sm">
             <article class="entry card post-list featured-posts-grid__entry">
                 <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url({{$listTinMoiBanner[0]->urlHinh}})">
-                <a href="single-post.html" class="thumb-url"></a>
+                <a href="./ctt/{{$item->idTin}}" class="thumb-url"></a>
                 <img src={{$listTinMoiBanner[0]->urlHinh}} alt="" class="entry__img d-none">
                 <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">{{$listTinMoiBanner[0]->Ten}}</a>
                 </div>
 
                 <div class="entry__body post-list__body card__body">
                 <h2 class="entry__title">
-                    <a href="single-post.html">{{$listTinMoiBanner[0]->TieuDe}}</a>
+                    <a href="./ctt/{{$item->idTin}}">{{$listTinMoiBanner[0]->TieuDe}}</a>
                 </h2>
                 <ul class="entry__meta">
                     <li class="entry__meta-author">
@@ -62,7 +62,7 @@
 
                 <div class="entry__body post-list__body card__body">
                 <h2 class="entry__title">
-                    <a href="single-post.html">{{$listTinMoiBanner[1]->TieuDe}}</a>
+                    <a href="./ctt/{{$item->idTin}}">{{$listTinMoiBanner[1]->TieuDe}}</a>
                 </h2>
                 <ul class="entry__meta">
                     <li class="entry__meta-author">
@@ -89,7 +89,7 @@
 
                 <div class="entry__body post-list__body card__body">
                 <h2 class="entry__title">
-                    <a href="single-post.html">{{$listTinMoiBanner[2]->TieuDe}}</a>
+                    <a href="./ctt/{{$item->idTin}}">{{$listTinMoiBanner[2]->TieuDe}}</a>
                 </h2>
                 <ul class="entry__meta">
                     <li class="entry__meta-author">
@@ -121,7 +121,7 @@
 
                 <div class="entry__body card__body">
                 <h2 class="entry__title">
-                    <a href="single-post.html">{{$listTinMoiBanner[3]->TieuDe}}</a>
+                    <a href="./ctt/{{$item->idTin}}">{{$listTinMoiBanner[3]->TieuDe}}</a>
                 </h2>
                 <ul class="entry__meta">
                     <li class="entry__meta-author">
