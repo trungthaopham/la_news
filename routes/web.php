@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\TinController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\theloai;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TinController::class, 'index']);
+// Route::get('/test', function () {
+//     $kq = theloai::all();
+//     print_r($kq);
+// });
+Route::get('/ttl', [TinController::class, 'tintrongloai']);

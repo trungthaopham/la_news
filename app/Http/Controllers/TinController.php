@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+
 use Illuminate\Http\Request;
 
 class TinController extends Controller
@@ -14,9 +15,14 @@ class TinController extends Controller
      */
     public function index()
     {
+
         return view("index");
     }
 
+    public function tintrongloai()
+    {
+        return view('layout-tin-theo-loai');
+    }
     /**
      * Show the form for creating a new resource.
      *

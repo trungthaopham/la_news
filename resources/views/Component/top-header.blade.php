@@ -1,12 +1,20 @@
+
 <div class="row">
 
     <!-- Top menu -->
     <div class="col-lg-6">
         <ul class="top-menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Contact</a></li>
-        </ul>
+        <li><a href="#">
+        <?php
+
+
+            $dt = new DateTime();
+            echo $dt->format('Y-m-d H:i:s');
+
+
+        ?>
+        </a></li>
+    </ul>
     </div>
 
     <!-- Socials -->

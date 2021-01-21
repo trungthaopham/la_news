@@ -1,3 +1,8 @@
+<?php
+    use App\Models\theloai as Theloai;
+    use App\Models\loaitin as Loaitin;
+    $listTheLoai = TheLoai::all();
+?>
 <header class="sidenav" id="sidenav">
 
     <!-- close -->
@@ -10,6 +15,24 @@
     <!-- Nav -->
     <nav class="sidenav__menu-container">
     <ul class="sidenav__menu" role="menubar">
+        @foreach($listTheLoai as $theLoai)
+            <li>
+                <a href="#" class="sidenav__menu-url">{{$theLoai->TenTL}}</a>
+                <?php
+                    $listLoaiTin = Loaitin::where('idTL',$theLoai->idTL)->get();
+                ?>
+                @if($listLoaiTin != '')
+                <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+                <ul class="sidenav__menu-dropdown">
+                        @foreach($listLoaiTin as $loaiTin)
+                        <li><a href="index.html" class="sidenav__menu-url">{{$loaiTin->Ten}}</a></li>
+
+                        @endforeach
+                    </ul>
+                @else
+                @endif
+            </li>
+        @endforeach
         <li>
         <a href="#" class="sidenav__menu-url">Home</a>
         <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
