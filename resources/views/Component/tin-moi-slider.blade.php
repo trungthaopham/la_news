@@ -1,4 +1,10 @@
-<section class="section mb-0">
+<!-- Ad Banner 728 -->
+<div class="text-center pb-48">
+    <a href="#">
+    <img src="https://canhcoupon.com/images/khuyen-mai/2017/08/laptop-gia-tot-dien-thoai-gia-tot-fptshop-com-vn-banner.jpg" alt="">
+    </a>
+</div>
+{{-- <section class="section mb-0">
     <div class="title-wrap title-wrap--line title-wrap--pr">
     <h3 class="section-title">editors picks</h3>
     </div>
@@ -62,4 +68,4 @@
     </article>
     </div> <!-- end slider -->
 
-</section>
+</section> --}}

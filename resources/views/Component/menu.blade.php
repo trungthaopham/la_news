@@ -2,12 +2,9 @@
 
     use App\Models\theloai as Theloai;
     use App\Models\loaitin as Loaitin;
-    $listTheLoai = TheLoai::where('AnHien',1)
-    ->where('lang','vi')
-    ->get();
-    // echo $listTheLoai;
     use App\Http\Controllers\TinController;
-        $listTheLoai = DB::table('theloai')->select('idTL','tenTL')
+    //
+        $listTheLoai = TheLoai::select('idTL','tenTL')
         ->orderby('ThuTu','asc')
         ->where('AnHien','=','1')->where('lang','=','vi')
         ->get();

@@ -6,6 +6,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\tintuc as Tin;
+use App\Models\theloai as TheLoai;
+use App\Models\loaitin as LoaiTin;
+
 
 class TinController extends Controller
 {
@@ -23,21 +27,16 @@ class TinController extends Controller
     public function tintrongloai($idLT, $pageNum = 1)
     {
         settype($idLT, 'int');
-        $kq = DB::table('tin')
-            ->select('idTin', 'TieuDe', 'TomTat', 'urlHinh', 'Ngay')
-            ->where('idTin', $idLT)
+        $listTin = Tin::where('idLT', $idLT)
             ->where('AnHien', 1)
-            ->paginate(5);
-        $tenLT = DB::table('loaitin')
-            ->where('idLT', $idLT)
+            ->paginate(7);
+        $tenLT = LoaiTin::where('idLT', $idLT)
             ->value('Ten');
-        $idTL = DB::table('loaitin')
-            ->where('idLT', $idLT)
+        $idTL = LoaiTin::where('idLT', $idLT)
             ->value('idTL');
-        $tenTL = DB::table('theloai')
-            ->where('idTL', $idTL)
+        $tenTL = TheLoai::where('idTL', $idTL)
             ->value('TenTL');
-        $data = ['listtin' => $kq, 'idTL' => $idTL, 'TenTL' => $tenTL, 'idLT' => $idLT, 'TenLT' => $tenLT];
+        $data = ['listtin' => $listTin, 'idTL' => $idTL, 'TenTL' => $tenTL, 'idLT' => $idLT, 'TenLT' => $tenLT];
         return view('layout-tin-theo-loai', $data);
     }
 

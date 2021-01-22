@@ -23,7 +23,10 @@
     @include('./Component/tin-moi-slider')
 @endsection
 @section('tin-theo-loai')
-    @include('./Component/tin-theo-loai')
+<?php  $idTL =3 ?>@include('./Component/tin-theo-loai')
+<?php  $idTL =9 ?>@include('./Component/tin-theo-loai')
+<?php  $idTL =6 ?>@include('./Component/tin-theo-loai')
+<?php  $idTL =7 ?>@include('./Component/tin-theo-loai')
 @endsection
 @section('tinmoibanner')
     <?php
@@ -40,5 +43,20 @@
     @include('./Component/videos')
 @endsection
 @section('content_catalog')
+    <?php
+    $listTin = Tin::where('AnHien', 1)
+    ->where('tin.lang','vi')
+    ->paginate(6);
+    $arrayColor= array("blue","purple","orange","violet","red","cyan");
+    $listTheLoai = TheLoai::select('idTL','tenTL')
+        ->orderby('ThuTu','asc')
+        ->where('AnHien','=','1')->where('lang','=','vi')
+        ->get();
+
+    $GroupIdTinByYkien= Ykien::select('idTin',Ykien::raw('count(*) as total'))
+        ->groupBy('ykien.idTin')->orderby('total','desc')->limit(3)
+        ->get();
+
+    ?>
     @include('./Component/tin-catalog')
 @endsection

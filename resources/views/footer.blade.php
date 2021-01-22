@@ -9,7 +9,7 @@
                 <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
                 </a>
                 <p class="copyright">
-                © 2018 Deus | Made by <a href="https://deothemes.com">DeoThemes</a>
+
                 </p>
                 <div class="socials socials--large socials--rounded mb-24">
                 <a href="#" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
@@ -23,14 +23,11 @@
 
             <div class="col-lg-2 col-md-6">
             <aside class="widget widget_nav_menu">
-                <h4 class="widget-title">Useful Links</h4>
+                <h4 class="widget-title">sitemap</h4>
                 <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">News</a></li>
-                <li><a href="categories.html">Advertise</a></li>
-                <li><a href="shortcodes.html">Support</a></li>
-                <li><a href="shortcodes.html">Features</a></li>
-                <li><a href="shortcodes.html">Contact</a></li>
+                <li><a href="./">Giới thiệu</a></li>
+                <li><a href="./">Trang chủ</a></li>
+                <li><a href="./lienhe">Liên Hệ</a></li>
                 </ul>
             </aside>
             </div>
@@ -41,21 +38,21 @@
 
             <div class="col-lg-3 col-md-6">
             <aside class="widget widget_mc4wp_form_widget">
-                <h4 class="widget-title">Newsletter</h4>
-                <p class="newsletter__text">
-                <i class="ui-email newsletter__icon"></i>
-                Subscribe for our daily news
-                </p>
-                <form class="mc4wp-form" method="post">
-                <div class="mc4wp-form-fields">
-                    <div class="form-group">
-                    <input type="email" name="EMAIL" placeholder="Your email" required="">
-                    </div>
-                    <div class="form-group">
-                    <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
-                    </div>
+                <h4 class="widget-title">Theo dõi</h4>
+            <p class="newsletter__text">
+            <i class="ui-email newsletter__icon"></i>
+            Theo dỏi để nhận được thông báo khi có tin mới nhất
+            </p>
+            <form class="mc4wp-form" method="post">
+            <div class="mc4wp-form-fields">
+                <div class="form-group">
+                <input type="email" name="EMAIL" placeholder="Nhập địa chỉ email của bạn" required="">
                 </div>
-                </form>
+                <div class="form-group">
+                <input type="submit" class="btn btn-lg btn-color" value="Đăng ký">
+                </div>
+            </div>
+            </form>
             </aside>
             </div>
 

@@ -1,3 +1,4 @@
+<?php use App\Http\Controllers\Tincontroller; ?>
 @extends('layout')
 @section('noidungchinh')
 <div class="blog__content mb-72">
@@ -17,7 +18,8 @@
         </ul>
 
         <!-- Contact Form -->
-        <form id="contact-form" class="contact-form mt-30 mb-30" method="post" action="#">
+        <form id="contact-form" class="contact-form mt-30 mb-30" method="post" action="./lienhe">
+            {{ csrf_field()}}
         <div class="contact-name">
             <label for="name">Họ và tên:<abbr title="required" class="required">*</abbr></label>
             <input name="name" id="name" type="text">
@@ -28,7 +30,7 @@
         </div>
         <div class="contact-subject">
             <label for="email">Điện thoại:</label>
-            <input name="subject" id="subject" type="tel">
+            <input name="phone" id="subject" type="tel">
         </div>
         <div class="contact-subject">
             <label for="email">Tiêu đề:</label>
@@ -39,7 +41,8 @@
             <textarea id="message" name="message" rows="7" required="required"></textarea>
         </div>
 
-        <input type="submit" class="btn btn-lg btn-color btn-button" value="Send Message" id="submit-message">
+        {{-- <input type="submit" class="btn btn-lg btn-color btn-button" value="Gửi liên hệ" id="submit-message"> --}}
+        <input type="submit" class="btn btn-lg btn-color btn-button text-center" style="margin: 0 50%; padding :5px 15px;" value="Gửi">
         <div id="msg" class="message"></div>
         </form>
 

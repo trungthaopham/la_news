@@ -2336,12 +2336,27 @@ img.mfp-img {
 		margin-bottom: 0; }
 		@media only screen and (max-width: 991px) {
 			.post-list__img-holder {
-				width: 170px; } }
+                width: 170px; } }
+    .post-list__img-holder_home{
+        -webkit-box-flex: 0;
+		    -ms-flex: 0 0 30%;
+		        flex: 0 0 30%;
+		margin-right: 30px;
+		margin-bottom: 0; }
+		@media only screen and (max-width: 991px) {
+			.post-list__img-holder {
+                width: 170px; }
+    }
 	.post-list__body {
 		overflow: hidden;
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 0 50%;
 		        flex: 0 0 50%; }
+	.post-list__body_home {
+		overflow: hidden;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 70%;
+		        flex: 0 0 70%; }
 	@media only screen and (max-width: 575px) {
 		.post-list {
 			display: block; }

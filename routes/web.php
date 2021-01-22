@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuimailController;
 use App\Http\Controllers\TinController;
 use Illuminate\Support\Facades\Route;
 use App\Models\theloai;
@@ -23,3 +24,4 @@ Route::get('/ttl', [TinController::class, 'tintrongloai']);
 Route::get('ctt/{id}', [TinController::class, 'chitiettin']);
 Route::get('ttl/{id}', [TinController::class, 'tintrongloai']);
 Route::get('lienhe/', [TinController::class, 'lienhe']);
+Route::post('lienhe/', [GuimailController::class, 'guimaillienhe']);

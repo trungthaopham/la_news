@@ -8,15 +8,8 @@
 
 @extends('layout')
 @section('noidungchinh')
-    <?php
-    $listTinMoi = Tin::where('NoiBat','=',1)
-    ->orderby('Ngay','desc')
-    ->where('tin.AnHien','=','1')
-    ->join('loaitin', 'tin.idLT', '=', 'loaitin.idLT')
-    ->where('tin.lang','vi')
-    ->offset(0)->limit(4)->get();
-    $listTheLoai = TheLoai::limit(4)->get()
-    ?>
-    @include('./Component/tin-moi-theo-the-loai')
+
+    @include('./Component/tin-trong-loai')
+
 @endsection
 

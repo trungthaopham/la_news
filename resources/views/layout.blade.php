@@ -12,7 +12,7 @@
 
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700%7CSource+Sans+Pro:400,600,700' rel='stylesheet'>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 <!-- Css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/font-icons.css" />
@@ -138,25 +138,25 @@
 
         <!-- Widget Newsletter -->
         <aside class="widget widget_mc4wp_form_widget">
-            <h4 class="widget-title">Newsletter</h4>
+            <h4 class="widget-title">Theo dõi</h4>
             <p class="newsletter__text">
             <i class="ui-email newsletter__icon"></i>
-            Subscribe for our daily news
+            Theo dỏi để nhận được thông báo khi có tin mới nhất
             </p>
             <form class="mc4wp-form" method="post">
             <div class="mc4wp-form-fields">
                 <div class="form-group">
-                <input type="email" name="EMAIL" placeholder="Your email" required="">
+                <input type="email" name="EMAIL" placeholder="Nhập địa chỉ email của bạn" required="">
                 </div>
                 <div class="form-group">
-                <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
+                <input type="submit" class="btn btn-lg btn-color" value="Đăng ký">
                 </div>
             </div>
             </form>
         </aside> <!-- end widget newsletter -->
 
-        <!-- Widget Socials -->
-        <aside class="widget widget-socials">
+        <!-- Widget Socials ------------------------------------------------------------------------>
+        {{-- <aside class="widget widget-socials">
             <h4 class="widget-title">Let's hang out on social</h4>
             <div class="socials socials--wide socials--large">
             <div class="row row-16">
@@ -190,18 +190,14 @@
                 </div>
             </div>
             </div>
-        </aside> <!-- end widget socials -->
+        </aside>  --}}
+        <!-- end widget socials -->
 
         </aside> <!-- end sidebar -->
 
     </div> <!-- end content -->
 
-    <!-- Ad Banner 728 -->
-    <div class="text-center pb-48">
-        <a href="#">
-        <img src="img/content/placeholder_728.jpg" alt="">
-        </a>
-    </div>
+
 
     <!-- Carousel posts -->
     @yield('tinmoislider')
@@ -209,11 +205,14 @@
 
 
     <!-- Posts from categories -->
+    <section class="section mb-0">
+        <div class="row">
     @yield('tin-theo-loai')
     <!-- end posts from categories -->
-
+        </div>
+</section>
     <!-- Video posts -->
-    @yield('videos')
+    {{-- @yield('videos') --}}
     <!-- end video posts -->
 
 
